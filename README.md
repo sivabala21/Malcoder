@@ -26,13 +26,13 @@ chmod +x Malcoder_linux
 ./Malcoder_linux
 ```
 ## Installing (Termux):
-'''
+```
 apt-get update -y
 apt-get install git
 git clone -b termux https://github.com/BOT-CODER/Malcoder.git
 cd Malcoder/Malcoder_termux
 python3 Malcoder_termux.py
-'''
+```
 
 ## Installing (Windows):
 ```
