@@ -43,7 +43,3 @@ https://github.com/BOT-CODER/Malcoder/tree/windows
 [ Quick download exe file](https://github.com/BOT-CODER/Malcoder/raw/windows/Malcoder_windows/Malcoder_Windows.exe)
 
 ## OUR Youtube channel:
-
-[Tech Core](https://www.youtube.com/channel/UCQ-LKudsVwfoXRhvDF2-vGQ?sub_confirmation=1)
-
-(subscribe for hacking stuff videos )
