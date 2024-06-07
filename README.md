@@ -1,6 +1,5 @@
 # Malcoder v1.1
-This Tool generate malicious code for windows to crash and do many things
-
+This Tool generate malicious code for windows
 ![Malcoder](https://i.ibb.co/D5jZJ9y/tyu.png)
 
 # How it Works? 
